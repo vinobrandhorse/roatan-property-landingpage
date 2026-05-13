@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roatan Real Estate — Find Your Perfect Beachfront Property</title>
+<meta name="description" content="Browse beachfront homes, investment condos, jungle retreats, and luxury villas in Roatan, Honduras." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="https://roatanrealestate.com" class="navbar__logo">
+      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
+    </a>
+    <nav class="navbar__nav">
+      <a href="https://roatanrealestate.com/properties">Properties</a>
+      <a href="https://roatanrealestate.com/agents">Agents</a>
+      <a href="https://roatanrealestate.com/reviews">Reviews</a>
+      <a href="https://roatanrealestate.com/blog">Blog</a>
+      <a href="https://roatanrealestate.com/contact">Contact</a>
+    </nav>
+    <a href="https://roatanrealestate.com/login" class="navbar__signin">Sign In</a>
+    <button class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU DRAWER -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__header">
+    <a href="https://roatanrealestate.com" class="navbar__logo">
+      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
+    </a>
+    <button class="mobile-menu__close" aria-label="Close menu" data-menu-toggle>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 5l12 12M17 5L5 17" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="https://roatanrealestate.com/properties">Properties</a>
+    <a href="https://roatanrealestate.com/areas">Areas</a>
+    <a href="https://roatanrealestate.com/agents">Agents</a>
+    <a href="https://roatanrealestate.com/reviews">Reviews</a>
+    <a href="https://roatanrealestate.com/blog">Blog</a>
+    <a href="https://roatanrealestate.com/contact">Contact</a>
+  </nav>
+  <a href="https://roatanrealestate.com/login" class="mobile-menu__signin">Sign In</a>
+</div>
+
+<script>
+(function(){
+  var menu = document.getElementById('mobile-menu');
+  var toggles = document.querySelectorAll('[data-menu-toggle]');
+  function setOpen(open){
+    menu.classList.toggle('is-open', open);
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+    toggles.forEach(function(b){ if(b.classList.contains('navbar__burger')) b.setAttribute('aria-expanded', open); });
+  }
+  toggles.forEach(function(b){
+    b.addEventListener('click', function(){ setOpen(!menu.classList.contains('is-open')); });
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false);
+  });
+})();
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="eyebrow eyebrow--cyan">ROATAN REAL ESTATE GUIDE</p>
+    <h1 class="hero__title">Find Your Perfect Beachfront Property in Roatan</h1>
+    <p class="hero__sub">Browse by neighborhood or property type — beachfront homes,<br/>investment condos, jungle retreats, and more.</p>
+    <div class="hero__ctas">
+      <a href="#areas" class="btn btn--primary">
+        Explore Roatan Areas
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="#001f4d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#types" class="btn btn--alternate">Browse Property Types</a>
+    </div>
+  </div>
+</section>
+
+<!-- BEACHFRONT PROPERTIES -->
+<section class="neighborhoods" id="areas">
+  <div class="neighborhoods__inner">
+    <div class="section-head section-head--center">
+      <h2 class="section-head__title">Featured Beachfront<br/>Properties in Roatan</h2>
+      <p class="section-head__sub">Direct beach access, premium views, and proven rental upside.<br/>Hand-picked listings from across the island's most desirable shores.</p>
+    </div>
+
+    <div class="cards-3 cards-3--props">
+      <a class="pcard" href="https://roatanrealestate.com/properties/2-br-4.0-ba-homes-in-lawson-rock-26-104-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260216032710579611000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$1,190,000</p>
+            <span class="pcard__tag">Homes</span>
+          </div>
+          <h3 class="pcard__title">2 Bed 4 Bath Homes in Lawson Rock</h3>
+          <p class="pcard__desc">Perched on one of the largest parcels in Lawson Rock, this 1.6-acre estate offers exceptional privacy and sweeping Caribbean views.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 2</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1M2 13l-1 1M14 13l1 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 4</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> — sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://roatanrealestate.com/properties/3-br-3.0-ba-homes-in-seadancer-26-97-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260217212355719274000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$499,000</p>
+            <span class="pcard__tag">Homes</span>
+          </div>
+          <h3 class="pcard__title">3 Bed 3 Bath Homes in Sandy Bay</h3>
+          <p class="pcard__desc">Casa de Pina — relaxed island living in the serene beachfront community of Seadancer. Well-kept, move-in ready.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 3</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 3</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> — sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://roatanrealestate.com/properties/3-br-3.5-ba-homes-in-sandy-bay-26-74-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260224164629116280000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$599,000</p>
+            <span class="pcard__tag">Homes</span>
+          </div>
+          <h3 class="pcard__title">3 Bed 3.5 Bath Homes in Sandy Bay</h3>
+          <p class="pcard__desc">This beachfront home features three bedrooms and three and a half bathrooms in a quiet, established neighborhood.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 3</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 3.5</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> — sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://roatanrealestate.com/properties/7-br-6.0-ba-homes-in-sandy-bay-26-69-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260207205044569117000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$1,390,000</p>
+            <span class="pcard__tag">Homes</span>
+          </div>
+          <h3 class="pcard__title">7 Bed 6 Bath Homes in Sandy Bay</h3>
+          <p class="pcard__desc">Future dream residence in the heart of Sandy Bay — one of Roatan's most desirable and peaceful beachfront neighborhoods.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 7</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 6</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> — sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://roatanrealestate.com/properties/3-br-3.5-ba-condos-in-infinity-bay-beach-resort-26-54-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260127175429574874000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$1,600,000</p>
+            <span class="pcard__tag">Condos</span>
+          </div>
+          <h3 class="pcard__title">3 Bed 3.5 Bath Condos in West Bay</h3>
+          <p class="pcard__desc">Ultra-luxury beachfront penthouse in a prestigious Caribbean resort. Sweeping ocean views and elevated indoor-outdoor living.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 3</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 3.5</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> — sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+
+      <a class="pcard" href="https://roatanrealestate.com/properties/9-br-9.00-ba-residential-in-sandy-bay-26-35-roatan-honduras" target="_blank" rel="noopener">
+        <div class="pcard__img" style="background-image:url('https://cdn.photos.sparkplatform.com/rra/20260123211720715178000000-o.jpg')">
+          <span class="pcard__status">For Sale</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__head">
+            <p class="pcard__price">$1,995,000</p>
+            <span class="pcard__tag">Residential</span>
+          </div>
+          <h3 class="pcard__title">9 Bed 9 Bath in Sandy Bay</h3>
+          <p class="pcard__desc">The Sanctuary — a rare beachfront investment and tropical resort retreat in Sandy Bay. Privacy, natural beauty, and strong rental potential.</p>
+          <div class="pcard__meta">
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M2 9v3M14 9v3M2 9h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 9</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8zM4 8V5a2 2 0 0 1 2-2h1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 9</span>
+            <span><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" stroke="currentColor" stroke-width="1.4" rx="1"/></svg> 6,000 sqft</span>
+          </div>
+          <span class="pcard__cta">I'm Interested</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="neighborhoods__cta">
+      <a href="https://roatanrealestate.com/properties?keyword=beachfront" class="btn btn--sky">View All Beachfront Properties <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTY TYPES -->
+<section class="types" id="types">
+  <div class="types__inner">
+    <div class="section-head section-head--center">
+      <p class="eyebrow eyebrow--sky">BROWSE BY PROPERTY TYPE</p>
+      <h2 class="section-head__title">What Kind of Property<br/>Are You Looking For?</h2>
+    </div>
+
+    <div class="cards-3 cards-3--types">
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=beachfront" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/beachfront.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Beachfront Homes</h3>
+          <p>Direct beach access, premium views, high rental upside.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=condo" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/investment.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Investment Condos</h3>
+          <p>Turnkey rental income, managed properties, proven ROI.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=jungle" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/jungle.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Jungle Retreats</h3>
+          <p>Privacy, nature, unique lifestyle — growing buyer segment.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=land" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/lots.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Lots &amp; Land</h3>
+          <p>Build your vision from the ground up at entry-level prices.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=luxury" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/luxury.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Luxury Villas</h3>
+          <p>World-class finishes, infinity pools, private estates.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+      <a class="tcard" href="https://roatanrealestate.com/properties?keyword=eco" target="_blank" rel="noopener">
+        <img class="tcard__icon" src="assets/icons/property/eco.svg" alt="" />
+        <div class="tcard__body">
+          <h3>Eco Properties</h3>
+          <p>Sustainable builds, off-grid options, conservation areas.</p>
+        </div>
+        <span class="tcard__cta">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT STATS -->
+<section class="invest">
+  <div class="invest__inner">
+    <div class="section-head section-head--center">
+      <p class="eyebrow eyebrow--cyan">WHY INVEST IN ROATAN</p>
+      <h2 class="section-head__title">The Caribbean's Best-Kept<br/>Investment Secret</h2>
+    </div>
+    <div class="invest__stats">
+      <div class="stat">
+        <p class="stat__value">+42%</p>
+        <p class="stat__label">Engagement growth<br/>(last 6 months)</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">$180K</p>
+        <p class="stat__label">Average entry price<br/>for condos</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">12%+</p>
+        <p class="stat__label">Avg. annual rental<br/>yield potential</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">1 hr</p>
+        <p class="stat__label">Direct flight from<br/>Miami / Houston</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta">
+  <div class="cta__inner">
+    <div class="cta__text">
+      <h2>Ready to Find Your Property in Roatan?</h2>
+      <p>Talk to a local expert. No pressure — just the right information for your decision.</p>
+      <div class="cta__trust">
+        <div class="cta__stars" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="#f4df1e"><path d="M8 1.5l2 4.5 5 .5-3.7 3.4 1.1 4.9L8 12.3 3.6 14.8l1.1-4.9L1 6.5l5-.5z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#f4df1e"><path d="M8 1.5l2 4.5 5 .5-3.7 3.4 1.1 4.9L8 12.3 3.6 14.8l1.1-4.9L1 6.5l5-.5z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#f4df1e"><path d="M8 1.5l2 4.5 5 .5-3.7 3.4 1.1 4.9L8 12.3 3.6 14.8l1.1-4.9L1 6.5l5-.5z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#f4df1e"><path d="M8 1.5l2 4.5 5 .5-3.7 3.4 1.1 4.9L8 12.3 3.6 14.8l1.1-4.9L1 6.5l5-.5z"/></svg>
+          <svg viewBox="0 0 16 16" fill="#f4df1e"><path d="M8 1.5l2 4.5 5 .5-3.7 3.4 1.1 4.9L8 12.3 3.6 14.8l1.1-4.9L1 6.5l5-.5z"/></svg>
+        </div>
+        <span>Trusted by 1,200+ buyers</span>
+      </div>
+    </div>
+    <a href="https://roatanrealestate.com/guide" class="btn btn--primary" target="_blank" rel="noopener">
+      Download The Guide
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="#001f4d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p>Your premier real estate partner<br/>for buying, selling, and renting<br/>properties in Roatan, Honduras.</p>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/roatanrealestate" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/icons/social/facebook.png" alt=""/></a>
+          <a href="https://www.instagram.com/roatanrealestate" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/social/instagram.png" alt=""/></a>
+          <a href="https://www.youtube.com/@roatanrealestate" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/icons/social/youtube.png" alt=""/></a>
+          <a href="https://www.linkedin.com/company/roatan-real-estate" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/social/linkedin.png" alt=""/></a>
+        </div>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="https://roatanrealestate.com/properties">Properties</a>
+          <a href="https://roatanrealestate.com/areas">Areas</a>
+          <a href="https://roatanrealestate.com/agents">Agents</a>
+          <a href="https://roatanrealestate.com/reviews">Reviews</a>
+          <a href="https://roatanrealestate.com/contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Guides &amp; Resources</h4>
+          <a href="https://roatanrealestate.com/guide">Property Buying Guide</a>
+          <a href="https://roatanrealestate.com/guide">Property Selling Guide</a>
+          <a href="https://roatanrealestate.com/guide">Investor Information</a>
+          <a href="https://roatanrealestate.com/blog">Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="https://roatanrealestate.com/privacy">Privacy Policy</a>
+          <a href="https://roatanrealestate.com/terms">Terms of Service</a>
+          <a href="https://roatanrealestate.com/cookies">Cookies Policy</a>
+          <a href="https://roatanrealestate.com/faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Roatan Real Estate. All rights reserved. Designed @brandhorse.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
