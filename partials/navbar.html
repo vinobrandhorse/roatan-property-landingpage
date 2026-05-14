@@ -1,0 +1,44 @@
+<!--
+  NAVBAR COMPONENT
+  When this landing page is migrated into the main roatanrealestate.com codebase,
+  this partial should be REPLACED with the live site's actual <Navbar/> React component
+  so the global header stays in sync. Until then, this static partial mirrors the live
+  site's navbar structure, links, and styling.
+-->
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="https://roatanrealestate.com" class="navbar__logo">
+      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
+    </a>
+    <nav class="navbar__nav">
+      <a href="https://roatanrealestate.com/properties">Properties</a>
+      <a href="https://roatanrealestate.com/agents">Agents</a>
+      <a href="https://roatanrealestate.com/testimonials">Testimonials</a>
+      <a href="https://roatanrealestate.com/blog">Blog</a>
+      <a href="https://roatanrealestate.com/contact">Contact</a>
+    </nav>
+    <a href="https://roatanrealestate.com/login" class="navbar__signin">Sign In</a>
+    <button class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__header">
+    <a href="https://roatanrealestate.com" class="navbar__logo">
+      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
+    </a>
+    <button class="mobile-menu__close" aria-label="Close menu" data-menu-toggle>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 5l12 12M17 5L5 17" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav">
+    <a href="https://roatanrealestate.com/properties">Properties</a>
+    <a href="https://roatanrealestate.com/agents">Agents</a>
+    <a href="https://roatanrealestate.com/testimonials">Testimonials</a>
+    <a href="https://roatanrealestate.com/blog">Blog</a>
+    <a href="https://roatanrealestate.com/contact">Contact</a>
+  </nav>
+  <a href="https://roatanrealestate.com/login" class="mobile-menu__signin">Sign In</a>
+</div>

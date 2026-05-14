@@ -14,14 +14,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Roatan Real Estate — Find Your Perfect Beachfront Property" />
 <meta property="og:description" content="Browse beachfront homes, investment condos, jungle retreats, and luxury villas in Roatan, Honduras." />
-<meta property="og:image" content="https://vinobrandhorse.github.io/roatan-property-landingpage/assets/hero/hero.png" />
-<meta property="og:url" content="https://vinobrandhorse.github.io/roatan-property-landingpage/" />
+<meta property="og:image" content="https://vinobrandhorse.github.io/beachfront-property/assets/hero/hero.png" />
+<meta property="og:url" content="https://vinobrandhorse.github.io/beachfront-property/" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Roatan Real Estate — Find Your Perfect Beachfront Property" />
 <meta name="twitter:description" content="Browse beachfront homes, investment condos, jungle retreats, and luxury villas in Roatan, Honduras." />
-<meta name="twitter:image" content="https://vinobrandhorse.github.io/roatan-property-landingpage/assets/hero/hero.png" />
+<meta name="twitter:image" content="https://vinobrandhorse.github.io/beachfront-property/assets/hero/hero.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,67 +30,8 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="navbar__inner">
-    <a href="https://roatanrealestate.com" class="navbar__logo">
-      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
-    </a>
-    <nav class="navbar__nav">
-      <a href="https://roatanrealestate.com/properties">Properties</a>
-      <a href="https://roatanrealestate.com/agents">Agents</a>
-      <a href="https://roatanrealestate.com/testimonials">Testimonials</a>
-      <a href="https://roatanrealestate.com/blog">Blog</a>
-      <a href="https://roatanrealestate.com/contact">Contact</a>
-    </nav>
-    <a href="https://roatanrealestate.com/login" class="navbar__signin">Sign In</a>
-    <button class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-</header>
-
-<!-- MOBILE MENU DRAWER -->
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <div class="mobile-menu__header">
-    <a href="https://roatanrealestate.com" class="navbar__logo">
-      <img src="assets/logo/logo.png" alt="Roatan Real Estate" />
-    </a>
-    <button class="mobile-menu__close" aria-label="Close menu" data-menu-toggle>
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 5l12 12M17 5L5 17" stroke="#001f4d" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-  <nav class="mobile-menu__nav">
-    <a href="https://roatanrealestate.com/properties">Properties</a>
-    <a href="https://roatanrealestate.com/agents">Agents</a>
-    <a href="https://roatanrealestate.com/testimonials">Testimonials</a>
-    <a href="https://roatanrealestate.com/blog">Blog</a>
-    <a href="https://roatanrealestate.com/contact">Contact</a>
-  </nav>
-  <a href="https://roatanrealestate.com/login" class="mobile-menu__signin">Sign In</a>
-</div>
-
-<script>
-(function(){
-  var menu = document.getElementById('mobile-menu');
-  var toggles = document.querySelectorAll('[data-menu-toggle]');
-  function setOpen(open){
-    menu.classList.toggle('is-open', open);
-    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
-    document.body.style.overflow = open ? 'hidden' : '';
-    toggles.forEach(function(b){ if(b.classList.contains('navbar__burger')) b.setAttribute('aria-expanded', open); });
-  }
-  toggles.forEach(function(b){
-    b.addEventListener('click', function(){ setOpen(!menu.classList.contains('is-open')); });
-  });
-  menu.addEventListener('click', function(e){
-    if (e.target.tagName === 'A') setOpen(false);
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false);
-  });
-})();
-</script>
+<!-- NAVBAR COMPONENT (loaded from partials/navbar.html) -->
+<div data-component="navbar"></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -359,50 +300,48 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img class="footer__logo" src="assets/logo/logo-light.png" alt="Roatan Real Estate" />
-        <div class="footer__desc">
-          <p>Your premier real estate partner</p>
-          <p>for buying, selling, and renting</p>
-          <p>properties in Roatan, Honduras.</p>
-        </div>
-      </div>
+<!-- FOOTER COMPONENT (loaded from partials/footer.html) -->
+<div data-component="footer"></div>
 
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h4>Navigation</h4>
-          <a href="https://roatanrealestate.com/properties">Properties</a>
-          <a href="https://roatanrealestate.com/areas">Areas</a>
-          <a href="https://roatanrealestate.com/agents">Agents</a>
-          <a href="https://roatanrealestate.com/testimonials">Testimonials</a>
-          <a href="https://roatanrealestate.com/contact">Contact</a>
-        </div>
-        <div class="footer__col">
-          <h4>Guides &amp; Resources</h4>
-          <a href="https://roatanrealestate.com/buying-guide">Property Buying Guide</a>
-          <a href="https://roatanrealestate.com/selling-guide">Property Selling Guide</a>
-          <a href="https://roatanrealestate.com/investor-information">Investor Information</a>
-          <a href="https://roatanrealestate.com/blog">Blog</a>
-        </div>
-        <div class="footer__col">
-          <h4>Legal</h4>
-          <a href="https://roatanrealestate.com/privacy-policy">Privacy Policy</a>
-          <a href="https://roatanrealestate.com/terms-of-service">Terms of Service</a>
-          <a href="https://roatanrealestate.com/cookies-policy">Cookies Policy</a>
-          <a href="https://roatanrealestate.com/faq">FAQ</a>
-        </div>
-      </div>
-    </div>
+<script>
+/* Component loader — fetches partials and replaces the data-component placeholders.
+   Each partial lives in /partials/<name>.html and is injected at runtime. */
+(function(){
+  function initMobileMenu(){
+    var menu = document.getElementById('mobile-menu');
+    if(!menu) return;
+    var toggles = document.querySelectorAll('[data-menu-toggle]');
+    function setOpen(open){
+      menu.classList.toggle('is-open', open);
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.style.overflow = open ? 'hidden' : '';
+      toggles.forEach(function(b){ if(b.classList.contains('navbar__burger')) b.setAttribute('aria-expanded', open); });
+    }
+    toggles.forEach(function(b){
+      b.addEventListener('click', function(){ setOpen(!menu.classList.contains('is-open')); });
+    });
+    menu.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false);
+    });
+  }
 
-    <div class="footer__bottom">
-      <p>© 2026 Roatan Real Estate. All rights reserved. Crafted <a href="https://3daywebsite.co" target="_blank" rel="noopener">@3daywebsite.co</a>.</p>
-    </div>
-  </div>
-</footer>
+  var slots = document.querySelectorAll('[data-component]');
+  var pending = slots.length;
+  slots.forEach(function(slot){
+    var name = slot.getAttribute('data-component');
+    fetch('partials/' + name + '.html')
+      .then(function(r){ return r.text(); })
+      .then(function(html){
+        slot.outerHTML = html;
+        if(--pending === 0) initMobileMenu();
+      })
+      .catch(function(err){ console.error('Failed to load component:', name, err); });
+  });
+})();
+</script>
 
 </body>
 </html>
