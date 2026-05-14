@@ -956,7 +956,7 @@ a { color: inherit; text-decoration: none; }
     gap: 32px;
   }
   .footer__brand p { font-size: 15px; line-height: 1.6; }
-  .footer__brand p br { display: none; }
+  .footer__logo { height: 36px; max-width: 120px; }
   .footer__cols {
     width: 100%;
     flex-direction: column;
