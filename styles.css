@@ -71,10 +71,10 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 28px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   color: rgb(51, 65, 85);
-  line-height: 24px;
+  line-height: 20px;
 }
 .navbar__nav a { transition: color .15s; }
 .navbar__nav a:hover { color: var(--deep-ocean-blue); }
@@ -86,9 +86,9 @@ a { color: inherit; text-decoration: none; }
   background: var(--signin-bg);
   color: var(--white);
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
   padding: 8px 24px;
   border-radius: 6px;
   transition: opacity .15s;
@@ -744,7 +744,6 @@ a { color: inherit; text-decoration: none; }
 .footer__logo {
   height: 40px;
   width: auto;
-  margin-bottom: 8px;
 }
 .footer__brand p {
   font-family: 'Montserrat', sans-serif;
@@ -776,8 +775,8 @@ a { color: inherit; text-decoration: none; }
 
 .footer__cols {
   display: flex;
-  gap: 32px;
-  width: 904px;
+  gap: 128px;
+  flex: 1;
 }
 .footer__col {
   flex: 1;
@@ -803,15 +802,17 @@ a { color: inherit; text-decoration: none; }
 .footer__col a:hover { color: var(--white); }
 
 .footer__bottom {
-  padding: 24px 0;
+  border-top: 1px solid rgb(51, 65, 85);
+  padding: 56px 0 0;
   text-align: center;
 }
 .footer__bottom p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
   color: rgb(148, 163, 184);
+  margin-bottom: 24px;
 }
 .footer__bottom p a {
   color: inherit;
