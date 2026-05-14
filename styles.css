@@ -822,7 +822,7 @@ a { color: inherit; text-decoration: none; }
   .footer__cols { gap: 128px; }
 }
 .footer__col {
-  flex: 1;
+  min-width: 160px;
   display: flex;
   flex-direction: column;
   gap: 16px;
