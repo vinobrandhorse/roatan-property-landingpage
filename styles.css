@@ -778,12 +778,23 @@ a { color: inherit; text-decoration: none; }
   display: block;
   flex-shrink: 0;
 }
+.footer__desc {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(203, 213, 225);
+}
+.footer__desc p {
+  margin: 0;
+}
 .footer__brand p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 29.25px;
+  line-height: 28px;
   color: rgb(203, 213, 225);
+  margin: 0;
 }
 .footer__socials {
   display: flex;
