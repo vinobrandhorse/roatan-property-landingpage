@@ -948,22 +948,22 @@ a { color: inherit; text-decoration: none; }
   .cta .btn { width: 100%; }
 
   /* Footer */
-  .footer__inner { padding: 48px 20px; gap: 32px; }
+  .footer__inner { padding: 40px 20px; gap: 20px; }
   .footer__top {
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
   }
-  .footer__brand p { font-size: 15px; line-height: 1.6; }
-  .footer__logo { height: 36px; max-width: 120px; }
+  .footer__brand p { font-size: 15px; line-height: 1.55; }
+  .footer__logo { height: 44px; width: auto; max-width: none; }
   .footer__cols {
     width: 100%;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
-  .footer__col h4 { font-size: 18px; }
-  .footer__col a:first-of-type,
-  .footer__col a { font-size: 15px; line-height: 1.85; }
-  .footer__bottom { padding: 20px 16px; }
+  .footer__col { gap: 8px; }
+  .footer__col h4 { font-size: 18px; margin-bottom: 4px; }
+  .footer__col a { font-size: 15px; line-height: 1.7; }
+  .footer__bottom { padding: 18px 16px 8px; }
   .footer__bottom p { font-size: 13px; }
 }
 
