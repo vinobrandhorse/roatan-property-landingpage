@@ -730,8 +730,9 @@ a { color: inherit; text-decoration: none; }
   gap: 28px;
 }
 .footer__logo {
-  height: 56px;
-  width: auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
   margin-bottom: 8px;
 }
 .footer__brand p {
