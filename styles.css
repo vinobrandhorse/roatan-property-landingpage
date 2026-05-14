@@ -955,13 +955,14 @@ a { color: inherit; text-decoration: none; }
   .cta .btn { width: 100%; }
 
   /* Footer */
-  .footer__inner { padding: 48px 24px; gap: 32px; }
+  .footer__inner { padding: 48px 24px; gap: 40px; }
   .footer__top {
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
   }
+  .footer__brand { gap: 32px; }
   .footer__brand p { font-size: 18px; line-height: 1.55; }
-  .footer__logo { height: auto; width: auto; max-width: 102px; max-height: 40px; object-fit: contain; object-position: left center; }
+  .footer__logo { height: auto; width: auto; max-width: 102px; max-height: 40px; object-fit: contain; object-position: left center; margin-bottom: 0; }
   .footer__cols {
     width: 100%;
     flex-direction: column;
