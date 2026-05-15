@@ -4,6 +4,11 @@ This document hands off a static staging landing page for migration into the
 production codebase at **`brandhorse/roatan-real-estate`** (the live React app
 behind https://roatanrealestate.com).
 
+> **Companion document**: `SECTIONS.md` — a detailed section-by-section spec
+> describing every component on the page (content, layout, typography, colors,
+> spacing, responsive behavior, interactive states). Read it alongside this
+> file when rebuilding the page inside production.
+
 ---
 
 ## 1. Goal
